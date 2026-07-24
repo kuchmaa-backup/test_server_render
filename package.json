@@ -1,0 +1,8 @@
+{
+  "name": "bun-hello-world",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.ts"
+  }
+}
