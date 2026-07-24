@@ -1,4 +1,4 @@
-const http = require('http');
+import http from 'http';
 
 // Render автоматически прокидывает порт в process.env.PORT
 const PORT = process.env.PORT || 3000;
