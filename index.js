@@ -1,9 +1,13 @@
-const server = Bun.serve({
-  // Render автоматически передает нужный порт через переменную окружения
-  port: process.env.PORT || 3000,
-  fetch(req) {
-    return new Response("Hello AnalnyyMudrets from Bun!");
-  },
+const http = require('http');
+
+// Render автоматически прокидывает порт в process.env.PORT
+const PORT = process.env.PORT || 3000;
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+  res.end('Hello AnalnyyMudrets');
 });
 
-console.log(`Bun server running on port ${server.port}`);
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
